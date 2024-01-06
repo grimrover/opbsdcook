@@ -1,0 +1,61 @@
+#cp /etc/example/doas.conf /etc
+#persist add
+#vi /etc/X11/xenodm/Xsetup_0
+#disable xconsole
+
+
+doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts feh git obsdfreqd transmission fish exa scim scim-hangulscim-tables
+
+echo "exec xmonad" > .xsession
+
+
+echo "#!/bin/sh\n
+pulseaudio --start -D\n
+dbus-launch" > .xinitrc
+
+
+echo "#!/bin/sh\n
+export LANG=ko_KR.UTF-8\n
+export LC_CTYPE=ko_KR.UTF-8\n
+export LC_ALL=ko_KR.UTF-8\n
+export XMODIFIERS=@im=SCIM\n
+export GTK_IM_MODULE=scim\n
+export QT_IM_MODULE=scim\n
+scim -d" > ~/.profile
+
+
+#cp ~/grimrover/config/fish/config.fish ~/.config/fish/config.fish
+#echo "#!/bin/sh\n
+#export LANG=ko_KR.UTF-8\n
+#export LC_CTYPE=ko_KR.UTF-8\n
+#export LC_ALL=ko_KR.UTF-8\n
+#export XMODIFIERS=@im=SCIM\n
+#export GTK_IM_MODULE=scim\n
+#export QT_IM_MODULE=scim\n
+#scim -d" >> .config/fish/config.fish
+
+doas syspatch
+
+
+#Run syspatch(8) to install:
+#001_xserver     002_msplit      003_patch       004_ospfd       005_tmux
+#006_httpd       007_perl        008_vmm         009_pf          010_xserver
+#011_ssh
+
+#pkg_add obsdfreqd
+#rcctl ls on | grep ^apmd && rcctl set apmd flags -L && rcctl restart apmd
+#rcctl enable obsdfreqd
+#rcctl start obsdfreqd
+
+##jcs progman windowmanager install#
+#git clone https://github.com/jcs/progman
+#cd progman
+#doas pkg_add gdk-pixbuf-xlib gdk-pixbuf-xxd vim
+#make ; doas make install
+#echo "exec progman > ~/.xsession"
+
+
+#export XMODIFIERS="@im=SCIM"
+#export GTK_IM_MODULE=scim
+#export QT_IM_MODULE=scim
+#scim -d
