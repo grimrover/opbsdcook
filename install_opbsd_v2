@@ -47,8 +47,10 @@ cp xsession ~/.xsession
 
 
 ## feh setting
-
-
+mkdir ~/Pics
+vi ~/.fehbg
+echo "#!/bin/sh" > ~/.fehbg
+echo "feh --no-fehbg --bg-scale '/home/grimrover/Pics/apple_event_wallpaper01.png'" >> ~/.fehbg
 
 
 ## transmission setting
