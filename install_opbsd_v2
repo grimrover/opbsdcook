@@ -7,7 +7,7 @@
 
 
 ### pkg  setting
-#doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty feh git obsdfreqd transmission bash exa w3m scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts
+doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty feh git obsdfreqd transmission bash exa w3m scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts thunar wger curl
 
 #cp ~/grimrover/Downloads/config.fish ~/.config/fish/config.fish
 
@@ -42,3 +42,16 @@ RDOAS pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-ha
 #exec progman
 
 cp xsession ~/.xsession
+
+
+
+
+## feh setting
+
+
+
+
+## transmission setting
+
+
+
