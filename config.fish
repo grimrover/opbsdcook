@@ -2,16 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-export LANG=ko_KR.UTF-8
-export LC_ALL=ko_KR.UTF-8
-
-
-export XMODIFIERS="@im=SCIM"
-export GTK_IM_MODULE=scim
-export QT_IM_MODULE=scim
-scim -d
-
-
 alias tmuxn="tmux new -s"
 alias topm="top -h -d 1 -o PID,%CPU,%MEM,ARGS"
 alias pkgu="pkg upgrade && pkg update && apt upgrade && apt update"
@@ -21,9 +11,7 @@ alias ytd="yt-dlp"
 alias ls="exa"
 alias ll="ls -al"
 
-
 #ffmpeg -ss 0 -i audio.aac -t 135 -c copy output.aac
-
 
 #python3 -m pip install -U yt-dlp
 #pkg install ffmpeg
@@ -70,5 +58,4 @@ set -g fish_prompt_pwd_dir_length 0
 set -g theme_project_dir_length 1
 set -g theme_newline_cursor yes
 set -g theme_newline_prompt '$ '
-
 

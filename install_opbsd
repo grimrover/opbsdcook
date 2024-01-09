@@ -1,38 +1,15 @@
+
+### doas setting
 #cp /etc/example/doas.conf /etc
 #persist add
 #vi /etc/X11/xenodm/Xsetup_0
 #disable xconsole
 
 
-doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts feh git obsdfreqd transmission fish exa scim scim-hangulscim-tables
+### pkg  setting
+#doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty feh git obsdfreqd transmission bash exa w3m scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts
 
-echo "exec xmonad" > .xsession
-
-
-echo "#!/bin/sh\n
-pulseaudio --start -D\n
-dbus-launch" > .xinitrc
-
-
-echo "#!/bin/sh\n
-export LANG=ko_KR.UTF-8\n
-export LC_CTYPE=ko_KR.UTF-8\n
-export LC_ALL=ko_KR.UTF-8\n
-export XMODIFIERS=@im=SCIM\n
-export GTK_IM_MODULE=scim\n
-export QT_IM_MODULE=scim\n
-scim -d" > ~/.profile
-
-
-#cp ~/grimrover/config/fish/config.fish ~/.config/fish/config.fish
-#echo "#!/bin/sh\n
-#export LANG=ko_KR.UTF-8\n
-#export LC_CTYPE=ko_KR.UTF-8\n
-#export LC_ALL=ko_KR.UTF-8\n
-#export XMODIFIERS=@im=SCIM\n
-#export GTK_IM_MODULE=scim\n
-#export QT_IM_MODULE=scim\n
-#scim -d" >> .config/fish/config.fish
+#cp ~/grimrover/Downloads/config.fish ~/.config/fish/config.fish
 
 doas syspatch
 
@@ -42,11 +19,6 @@ doas syspatch
 #006_httpd       007_perl        008_vmm         009_pf          010_xserver
 #011_ssh
 
-#pkg_add obsdfreqd
-#rcctl ls on | grep ^apmd && rcctl set apmd flags -L && rcctl restart apmd
-#rcctl enable obsdfreqd
-#rcctl start obsdfreqd
-
 ##jcs progman windowmanager install#
 #git clone https://github.com/jcs/progman
 #cd progman
@@ -55,7 +27,18 @@ doas syspatch
 #echo "exec progman > ~/.xsession"
 
 
+RDOAS pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts libime
+
+##xsession setting
+#export GTK_IM_MODULE="xim"
+#export QT_IM_MODULE="xim"
 #export XMODIFIERS="@im=SCIM"
-#export GTK_IM_MODULE=scim
-#export QT_IM_MODULE=scim
-#scim -d
+#/usr/local/bin/scim -d
+#export LANG=ko_KR.UTF-8
+#export LC_ALL=ko_KR.UTF-8
+#export LC_CTYPE=ko_KR.UTF-8
+#~/.fehbg &
+#exec xmonad
+#exec progman
+
+cp xsession ~/.xsession
