@@ -7,7 +7,7 @@
 
 
 ### pkg  setting
-doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty feh git obsdfreqd transmission bash exa w3m scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts thunar wger curl
+doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc alacritty feh git obsdfreqd transmission bash exa w3m scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts thunar wger curl vim neovim
 
 #cp ~/grimrover/Downloads/config.fish ~/.config/fish/config.fish
 
@@ -19,6 +19,7 @@ doas syspatch
 #006_httpd       007_perl        008_vmm         009_pf          010_xserver
 #011_ssh
 
+
 ##jcs progman windowmanager install#
 #git clone https://github.com/jcs/progman
 #cd progman
@@ -26,8 +27,6 @@ doas syspatch
 #make ; doas make install
 #echo "exec progman > ~/.xsession"
 
-
-# pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts libime
 
 ##xsession setting
 #export GTK_IM_MODULE="xim"
@@ -40,17 +39,18 @@ doas syspatch
 #~/.fehbg &
 #exec xmonad
 #exec progman
+#exec fvwqm
 
-cp xsession ~/.xsession
-cp bashrc_setting ~/.bashrc
 
+#cat bashrc_setting > ~/.bashrc
 
 
 ## feh setting
 mkdir ~/Pics
-vi ~/.fehbg
-echo "#!/bin/sh" > ~/.fehbg
-echo "feh --no-fehbg --bg-scale '/home/grimrover/Pics/apple_event_wallpaper01.png'" >> ~/.fehbg
+cp apple_event_wallpaper01.png ~/Pics
+#vi ~/.fehbg
+#echo "#!/bin/sh" > ~/.fehbg
+"feh --bg-scale '~/Pics/apple_event_wallpaper01.png'"
 
 
 ## transmission setting
