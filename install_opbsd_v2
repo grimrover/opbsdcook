@@ -27,7 +27,7 @@ doas syspatch
 #echo "exec progman > ~/.xsession"
 
 
-RDOAS pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts libime
+# pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-hanterm-fonts libime
 
 ##xsession setting
 #export GTK_IM_MODULE="xim"
@@ -42,7 +42,7 @@ RDOAS pkg_add scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf ko-ha
 #exec progman
 
 cp xsession ~/.xsession
-
+cp bashrc_setting ~/.bashrc
 
 
 
