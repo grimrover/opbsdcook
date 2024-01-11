@@ -57,3 +57,22 @@ cp apple_event_wallpaper01.png ~/Pics
 
 
 
+## ffmpeg 
+#ffmpeg -i yesbuddy.mov -pix_fmt rgb24 output.gif
+
+#ffmpeg -ss 00:00:00.000 -i yesbuddy.mov -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif
+
+#convert -layers Optimize output.gif output_optimized.gif
+#
+#
+#After converting:
+#
+#ffmpeg -i input.mp4 input.gif 
+#
+#Try optimize frames:
+#
+#convert input.gif -verbose -coalesce -layers OptimizeFrame input_optframe.gif
+#And use gifsicle to make final optimization:
+#
+#gifsicle -O2 input_optframe.gif -o optimized.gif
+
