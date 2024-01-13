@@ -8,7 +8,7 @@ alias pkgu="pkg upgrade && pkg update && apt upgrade && apt update"
 alias vi="nvim"
 alias vim="nvim"
 alias ytd="yt-dlp"
-alias ls="exa"
+#alias ls="exa"
 alias ll="ls -al"
 
 #ffmpeg -ss 0 -i audio.aac -t 135 -c copy output.aac
