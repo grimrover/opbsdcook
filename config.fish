@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+neofetch
+
 alias tmuxn="tmux new -s"
 alias topm="top -h -d 1 -o PID,%CPU,%MEM,ARGS"
 alias pkgu="pkg upgrade && pkg update && apt upgrade && apt update"
