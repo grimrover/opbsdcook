@@ -87,10 +87,20 @@ feh --bg-scale ~/Pics/Monterey-Graphic-7-dragged.jpeg
 
 ## extra setting
 
-grimgremlin$ doas rcctl start messagebus
-messagebus(ok)
+#grimgremlin$ doas rcctl enable messagebus
 
-grimgremlin$ doas rcctl enable apmd
+#grimgremlin$ doas rcctl start messagebus
 
-grimgremlin$ doas rcctl start apmd
+#grimgremlin$ doas rcctl enable apmd
+
+#grimgremlin$ doas rcctl start apmd
+
+
+#grimgremlin$ doas sndioctl
+#input.level=0.784
+#input.mute=0
+#output.level=0.784
+#output.mute=0
+#grimgremlin$ doas sndioctl -f snd/1
+#snd/1: can't open control device
 
