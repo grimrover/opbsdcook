@@ -9,11 +9,15 @@
 ### pkg  setting
 doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc feh git obsdfreqd transmission scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf wget curl vim neovim
 
-doas pkg_add fish bash links 
+doas pkg_add bash links 
 
 #cp ~/grimrover/Downloads/config.fish ~/.config/fish/config.fish
 
 doas syspatch
+
+cat bashrc > ~/.bashrc
+cat xsession > ~/.xsession
+cat Xresources_magenta > ~/.Xresources
 
 
 #Run syspatch(8) to install:
@@ -49,10 +53,10 @@ doas syspatch
 
 ## feh setting
 mkdir ~/Pics
-cp apple_event_wallpaper01.png ~/Pics
+cp Monterey-Graphic-7-dragged.jpeg ~/Pics
 #vi ~/.fehbg
 #echo "#!/bin/sh" > ~/.fehbg
-"feh --bg-scale '~/Pics/apple_event_wallpaper01.png'"
+feh --bg-scale ~/Pics/Monterey-Graphic-7-dragged.jpeg
 
 
 ## transmission setting
@@ -77,4 +81,16 @@ cp apple_event_wallpaper01.png ~/Pics
 #And use gifsicle to make final optimization:
 #
 #gifsicle -O2 input_optframe.gif -o optimized.gif
+
+
+
+
+## extra setting
+
+grimgremlin$ doas rcctl start messagebus
+messagebus(ok)
+
+grimgremlin$ doas rcctl enable apmd
+
+grimgremlin$ doas rcctl start apmd
 
