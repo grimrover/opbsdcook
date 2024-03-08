@@ -7,7 +7,7 @@
 
 
 ### pkg  setting
-doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc feh git obsdfreqd transmission scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf wget curl vim neovim cmixer gimp nomacs
+doas pkg_add ranger mpv firefox xmonad ghc dmenu dbus pulseaudio musikcube htop neofetch gopher vlc feh git obsdfreqd transmission scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf wget curl vim neovim cmixer gimp nomacs node
 
 ##Korean packages
 #scim scim-hangul scim-tables ko-baekmuk-fonts ko-baekmuk-ttf imagemagick
