@@ -1,1 +1,0 @@
-ffmpeg -y -i 20250101_182435.mp4 -vf "drawtext=fontfile=roboto.ttf:fontsize=20:expansion=normal:text='%{pts\:gmtime\:1735913973\:%A, %d, %B %Y %I\\\:%M\\\:%S %p}'" -preset ultrafast -f mp4 output.mp4
